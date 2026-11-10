@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with the Bell Invest team — we're here to help you succeed in digital markets.">
+  <meta name="locale" content="en">
+  <meta name="content-language" content="en">
+  <!-- Temporary concept prototype: Tesla × SpaceX visual identity applied to Bell Invest.
+       Not affiliated with or endorsed by Tesla, Inc. or SpaceX. See README.md. -->
+  <title>Contact | Tesla × SpaceX</title>
+  <link rel="icon" href="/assets/brand/tesla-emblem.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body data-brand-title="contact">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand-lockup" href="/" aria-label="Home">
+        <img class="brand-lockup__img" data-brand="primary" data-brand-field="logo"
+             src="/assets/brand/tesla-wordmark.svg" alt="Tesla" width="120" height="16">
+        <span class="brand-lockup__divider" aria-hidden="true"></span>
+        <img class="brand-lockup__img" data-brand="secondary" data-brand-field="logo"
+             src="/assets/brand/spacex-wordmark.svg" alt="SpaceX" width="120" height="16">
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="/">Home</a>
+        <a class="nav__link" href="/markets/">Markets</a>
+        <a class="nav__link" href="/#features">Features</a>
+        <a class="nav__link" href="/contact/" aria-current="page">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="nav__signin" href="/login/">Sign In</a>
+        <a class="btn btn--solid nav__cta" href="/register/">Get Started</a>
+      </div>
+
+      <button class="nav__burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile" id="mobile-menu">
+      <a class="nav__mlink" href="/">Home</a>
+      <a class="nav__mlink" href="/markets/">Markets</a>
+      <a class="nav__mlink" href="/#features">Features</a>
+      <a class="nav__mlink" href="/contact/" aria-current="page">Contact</a>
+      <div class="nav__mobile-actions">
+        <a class="btn btn--ghost" href="/login/">Sign In</a>
+        <a class="btn btn--solid" href="/register/">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================== PAGE HEAD ==================== -->
+    <section class="page-head">
+      <div class="container page-head__inner">
+        <p class="eyebrow"><span class="eyebrow__tick" aria-hidden="true"></span>Contact</p>
+        <h1 class="page-head__title">Get in touch</h1>
+        <p class="page-head__sub">Have a question or need support? Our team is here to help you succeed in digital markets.</p>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section" aria-label="Contact details and form">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Info column -->
+          <div class="contact-info reveal">
+            <div class="contact-block">
+              <h3>Email</h3>
+              <p><a href="mailto:support@domain.com">support@domain.com</a></p>
+            </div>
+
+            <div class="contact-block">
+              <h3>Phone</h3>
+              <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+            </div>
+
+            <div class="contact-block">
+              <h3>Address</h3>
+              <p>123 Crypto Street, Block 42<br>New York, NY, USA</p>
+            </div>
+
+            <div class="contact-block">
+              <h3>Location</h3>
+              <div class="map-frame">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400607!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s123%20Crypto%20Street%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1678888888888!5m2!1sen!2sus"
+                  title="Office location map"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form column -->
+          <div class="form-panel reveal" data-delay="1">
+            <h2>Send us a message</h2>
+            <p class="form-intro">Fill in the form and we will get back to you as soon as possible.</p>
+
+            <!-- When deployed inside the Laravel application, replace the empty
+                 _token value with {{ csrf_token() }} — the endpoint and field
+                 names match the original platform form exactly. -->
+            <form id="contact-form" action="/contact" method="POST" novalidate>
+              <input type="hidden" name="_token" value="">
+
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+                <span class="field__error" id="name-error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                <span class="field__error" id="email-error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+                <span class="field__error" id="message-error" role="alert"></span>
+              </div>
+
+              <button class="btn btn--solid" type="submit">
+                Send Message
+                <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand-lockup" href="/" aria-label="Home">
+            <img class="brand-lockup__img" data-brand="primary" data-brand-field="logo"
+                 src="/assets/brand/tesla-wordmark.svg" alt="Tesla" width="130" height="17">
+            <span class="brand-lockup__divider" aria-hidden="true"></span>
+            <img class="brand-lockup__img" data-brand="secondary" data-brand-field="logo"
+                 src="/assets/brand/spacex-wordmark.svg" alt="SpaceX" width="130" height="17">
+          </a>
+          <p class="footer__tagline">Advanced trading infrastructure for digital markets.</p>
+          <div class="footer__contact">
+            <a href="mailto:support@domain.com">support@domain.com</a>
+            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+            <span>123 Crypto Street, Block 42, New York, NY, USA</span>
+          </div>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.2h3.7l-8.1 9.3L24 22.8h-7.5l-5.9-7.7-6.7 7.7H.2l8.7-9.9L0 1.2h7.7l5.3 7 6-7zm-1.3 19.4h2L6.6 3.3H4.4l13.2 17.3z"/></svg>
+            </a>
+            <a href="#" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.1 3.2 1.9 11.4c-1.4.6-1.4 1.4-.2 1.8l5.4 1.7 2.1 6.4c.2.7.1.9.8.9.5 0 .8-.3 1.1-.6l2.7-2.6 5.6 4.1c1 .6 1.8.3 2-1l3.7-17.4c.4-1.6-.6-2.4-1.7-1.9zM8.6 14.7l9.6-6c.5-.3.9-.1.6.2l-8.2 7.4-.3 3.4-1.7-5z"/></svg>
+            </a>
+            <a href="#" aria-label="Discord">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.5c1.7.4 3.2 1.1 4.5 2a16.6 16.6 0 0 0-14.4 0c1.3-.9 2.9-1.6 4.5-2L9.6 3a19.7 19.7 0 0 0-4.9 1.4C2 8.6 1.3 12.7 1.6 16.7a20 20 0 0 0 6 3l.7-1.1c-.7-.3-1.4-.6-2-1.1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.5-1.3.8-2 1.1l.7 1.1a19.9 19.9 0 0 0 6-3c.4-4.7-.6-8.7-3.9-12.3zM8.7 14.2c-1 0-1.7-.9-1.7-2s.8-2 1.7-2 1.8.9 1.7 2c0 1.1-.8 2-1.7 2zm6.6 0c-1 0-1.7-.9-1.7-2s.8-2 1.7-2 1.8.9 1.7 2c0 1.1-.7 2-1.7 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#">Exchange</a></li>
+            <li><a href="https://bellbroker.ojojoarmanitech.com/user/trading">Trading</a></li>
+            <li><a href="#">Wallet</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span data-brand-copyright>© 2026 Tesla × SpaceX. All rights reserved.</span>
+        <span class="footer__disclaimer">Temporary concept prototype. Not an official Tesla or SpaceX website.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/brand/brand.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/contact.js"></script>
+</body>
+</html>
